@@ -1,0 +1,6 @@
+<div class="post">
+	<%= render :partial => 'posts/header', :as => :post, :object => post %>
+	<p><%= strip_tags(truncate(post.body, :length => 500, :separator => ' ', :omission => ' ...')) %></p>
+	<p class="center"><%= link_to 'Read more >>', post %></p>
+	<hr/>
+</div>

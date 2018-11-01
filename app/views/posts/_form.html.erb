@@ -1,0 +1,37 @@
+<%= form_for(@post) do |f| %>
+  <% if @post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+      <% @post.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <p><%= f.label :title %><br />
+  <%= f.text_field :title %></p>
+  
+  <p><%= f.label :subtitle %><br />
+  <%= f.text_field :subtitle %></p>
+  
+  <p><%= f.label :category %><br />
+  <%= collection_select(:post, :category_id, Category.all, :id, :title, :prompt => true) %></p>
+  
+  <p><%= f.label "Amazon Keywords: type 'search' and keywords, or list comma-separated ASINs" %><br/>
+  <%= f.text_field :keywords %>
+  </p>  
+	
+  <p><%= f.label :body %>
+  	-- Use /// and \\\ for italics or [[[ and ]]] for bold.
+  <%= f.text_area :body, :size => "60x12" %></p>
+  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+
+<%= javascript_include_tag "admin.js" %>
+

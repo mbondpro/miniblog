@@ -1,0 +1,6 @@
+<% @page_title = @post.title %>
+
+<% if admin? %>
+	<%= link_to 'Edit Post', edit_post_path(@post) %>
+<% end %>
+<%= render @post %>

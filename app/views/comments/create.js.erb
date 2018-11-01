@@ -1,0 +1,9 @@
+$("#flash-error").hide();
+$("#no_comments").hide();
+$('#comments').prepend("<%=j render @comment %>");
+var newest = $('#comment_<%= @comment.id %>');
+var destination = newest.offset().top;
+newest.addClass('fresh');
+$(document).scrollTop(destination);
+$(newest).effect("highlight", {}, 20000);
+ 

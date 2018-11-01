@@ -1,0 +1,24 @@
+<div class="post">
+	<%= render :partial => 'posts/header', :as => :post, :object => post %>
+	<%= simple_format(raw(auto_link(post.body))) %>
+		
+	<%= render :partial => 'book' unless @items.empty? %>
+	
+	<h4>Comments:</h4>
+	<div id="comments">		
+		<% unless @comments.empty? %>			
+			<%= render :partial => 'comments/comment', :as => :comment, :collection => @comments  %>
+		<% else %>
+			<h4 id="no_comments">There are no user comments yet.</h4><br/>
+		<% end %>	
+	</div>
+
+<% if user_signed_in? %>
+	<div class="comment_form">
+		<%= render :partial => 'comments/form', :locals => {:post => post} %>
+	</div>		
+<% else %>
+  <%= link_to 'Sign in to comment', new_user_session_path %>
+<% end %>
+
+</div>

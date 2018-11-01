@@ -1,0 +1,4 @@
+<% @page_title = 'Blog Title' %>
+<h1>Latest Posts About My Topic</h1>
+<br/>
+<%= render :partial => "posts/post_brief", :as => :post, :collection => @posts %>

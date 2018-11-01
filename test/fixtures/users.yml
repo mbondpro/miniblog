@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+#one:
+ #	email: email@email.com
+#	username: my_username
+#	admin: 0
+#two:
+#	email: me@me.com
+#	admin: 1

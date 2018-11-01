@@ -1,0 +1,19 @@
+<div class='box' id='books' >
+ <div class='boxtop'><div></div></div>
+  <div class='boxcontent'>
+	Related items:<br/>	
+	<% @items.each do |item|%>
+	<%# @result.xml %>
+		<p class="bookpic">
+			<%= image_tag item.image %>
+		</p>
+		<p>
+			<%= link_to 'See this product on Amazon', item.url %><br/>
+			<i><%= item.title %></i><br/>
+			<%= item.author %>.<br/>
+			<%= item.price %>
+		</p>
+	<% end %>
+  </div>
+ <div class='boxbottom'><div></div></div>
+</div>

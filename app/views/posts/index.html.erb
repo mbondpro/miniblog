@@ -1,0 +1,11 @@
+<%= will_paginate @posts %>
+
+<% if admin? %>
+	<%= link_to 'New Post', new_post_path %>
+<% end %>
+
+<% if @category %>
+	<h2>Posts for <%= @category %></h2>
+<% end %>
+
+<%= render :partial => "posts/post_brief", :as => :post, :collection => @posts %>

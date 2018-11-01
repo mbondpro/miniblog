@@ -1,0 +1,164 @@
+* {margin:0; padding:0;}
+
+/******** General tags ********/
+body {margin:25px auto; padding:0; font:76% Verdana,Tahoma,Arial,sans-serif; background:#1e3044; color:#303030; line-height:1.3em;}
+a {text-decoration:none; color:#20526a; font-weight:bold;}
+a:hover {text-decoration:underline; color:#20526a;}
+a img {border:0;}
+p {margin:0 0 18px 8px;}
+h2 {font-size:1.7em; font-weight:normal; letter-spacing:-1px; margin:10px 0 8px 0;}
+h3 {font-size:1.2em; margin:2px 0 8px 0;}
+
+/******** Main wrap ********/
+#wrap {background:#ffffff url(../images/wrapbg.gif) top left repeat-y; color:#303030; margin:0 auto; width:960px;}
+
+/******** Header ********/
+#header {background:url(../images/header.jpg) top left no-repeat; height:80px;}
+#header h1 {font-size:3.8em; letter-spacing:-4px; color:#d88d44; padding:18px 0 10px 45px;}
+#header h1 a {color:#d88d44; text-decoration:none;}
+#header h1 a:hover {color:#e99e55;}
+#slogan {color:#20526a; margin:15px 0 0 45px; font-size:1.6em; letter-spacing:-1px;}
+
+/******** Sitemenu, left sidebar ********/
+#sitemenu {clear:both; float:left; width:155px; margin:0; padding:5px 0 0 15px;}
+#sitemenu ul {list-style:none; width:155px; margin:0 0 20px 0; padding:0; font-size:1.2em; letter-spacing:-1px;}
+#sitemenu li {margin:1px 0 14px 0; }
+#sitemenu li a {font-weight:bold; text-decoration:none; color:#20526a; display:block; height:1.1em; padding:1px 2px 10px 8px; border-left: 8px solid #70a2ba;}
+#sitemenu li a:hover {color:#d88d44; text-decoration:none; border-left:8px solid #d88d44;}
+#sitemenu .current {border-left:8px solid #d88d44;}
+#sitemenu ul ul {font-size:0.8em; width:110px; font-weight:normal; margin:5px 0 8px 20px;}
+#sitemenu ul ul li {margin-bottom:2px;}
+#sitemenu ul ul li a {border:0; padding:2px;}
+#sitemenu ul ul li a:hover {border:0; padding:2px; text-decoration:underline;}
+
+/******** Extras, right sitebar ********/
+#extras {float:right; width:135px; margin:0; padding:5px 15px 0 0;}
+#extras ul {margin:0 0 14px 2px; list-style:none; color:#808080;}
+#extras li {margin:0 0 2px 0;}
+#extras li a {padding:2px 2px 2px 2px; height:1.2em; letter-spacing:-1px; font-weight:bold;}
+#extras li a:hover {color:#d88d44;}
+#extras ul ul, #extras ul ul ul {font-size:0.9em; line-height:1.2em; margin:2px 0 2px 15px;}
+#extras ul ul a, #extras ul ul ul a {font-weight:normal;}
+
+/******** Content variations ********/
+#content {margin:5px 170px 20px 170px; padding:3px; line-height:1.5em; text-align:left;}
+#content h2 {font-size:1.6em; margin:5px 0 8px 0;}
+#content h3 {font-size:1.4em; font-weight:normal; letter-spacing:-1px; margin:5px 0 8px 0;}
+
+/******** Footer ********/
+#footer {clear:both; margin:5px auto 0 auto; padding:10px 0 10px 0; width:960px; text-align:center; background: url(../images/footer.jpg) bottom left no-repeat; color:#555; font-size:0.9em; line-height:1.5em;}
+#footer p {margin:3px;}
+#footer p strong {font-size:1.1em; font-weight:400;}
+#footer a {color:#777; font-weight:400; text-decoration:none;}
+#footer a:hover {text-decoration:underline;}
+
+/******** Various classes ********/
+.datetag {width:50px; padding:0 0 10px 0; text-align:center; background:#20526a url(../images/date-bottom.gif) bottom left no-repeat; margin:2px 15px 1px 10px; color:#ffffff; font-size:2.2em; text-align:center; float:left;}
+.datetag .date {width:50px; display:block; letter-spacing:-1px; padding:15px 0 5px 0; background:#20526a url(../images/date-top.gif) top left no-repeat;}
+.datetag .month {font-size:0.6em; letter-spacing:-1px; width:50px; display:block; font-weight:bold;}
+.datetag .year {font-size:0.4em; letter-spacing:-1px; width:50px; display:block; font-weight:bold;}
+.textright {text-align:right;}
+.center {text-align:center;}
+.frontphoto {margin:20px 0 10px 0;}
+.small {font-size:0.8em;}
+.bold {font-weight:bold;}
+.clear {clear:both;}
+.hide {display:none;}
+
+/* comments */
+.box { background: #EBECE4; margin:5px 2px 2px 5px; }
+.boxtop { background: url(../images/ne.gif) no-repeat top right; }
+.boxtop div { font-size: 0; height: 10px; background: url(../images/nw.gif) no-repeat top left;}
+.boxbottom { background: url(../images/se.gif) no-repeat bottom right;}
+.boxbottom div { font-size: 0; height: 10px; background: url(../images/sw.gif) no-repeat bottom left;}
+.boxcontent { padding: 0px 10px 0px 10px;}
+.fresh { color: red; }  /* new comment */
+
+#comments {position: relative;}
+.left {float:left}
+.right {float:right}
+
+.bookpic {float:left; margin:3px; width: 80px; }
+
+#like {
+	width: 150px;
+	float:right;
+}
+
+/********* default styles 
+ * 
+ */
+
+
+.fieldWithErrors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 400px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin: 10px 5px 20px 5px;
+  background-color: #f0f0f0;
+}
+
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#error_explanation p {
+  color: #333;
+  margin-bottom: 5px;
+  padding: 5px;
+}
+
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+  margin: 10px 5px 5px 10px;
+}
+
+#notice, #success { background-color: #A4E7A0; border: 1px solid #26722D; }
+#alert, #failure { background-color: #F0A8A8; border: 1px solid #900; }
+#notice, #success, #alert, #failure { width: 95%; padding: 5px; }
+#notice p, #success p, #alert p, #failure p { margin-left: 20px; margin: 0 auto 10px auto; padding: 0; }
+#notice a, #success a, #alert a, #failure p { text-decoration: none; }
+#notice a { border: 1px solid #26722D; color: #26722D; }
+#alert a { border: 1px solid #900; color: #900; }
+#notice a:hover, #alert a:hover, #failure a:hover { color: #333; border: 1px solid #333; }
+
+
+.paging {
+	float:left;	
+}
+
+.paging a {
+	color: white;
+	background:	#FFFFFF;	
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	text-decoration:none;	
+}
+
+/* pagination */
+
+.pagination { padding: 3px; margin: 3px; }
+.pagination a { padding: 2px 5px 2px 5px; margin: 2px; border: 1px solid #aaaadd; text-decoration: none; color: #000099; }
+.pagination a:hover,
+.pagination a:active { border: 1px solid #000099; color: #000; }
+.pagination span.current { padding: 2px 5px 2px 5px; margin: 2px; border: 1px solid #000099; font-weight: bold; background-color: #000099; color: #FFF; }
+.pagination span.disabled { padding: 2px 5px 2px 5px; margin: 2px; border: 1px solid #eee; color: #ddd; }
+
+
+

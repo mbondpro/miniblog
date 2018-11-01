@@ -1,0 +1,8 @@
+<h2><%= link_to post.title, post %></h2>
+<h3><%= post.subtitle %></h3>
+<%= post.updated_at.strftime("%b %d, %Y") %>
+<h4>Posted in <i><%= link_to post.category, category_posts_path(post.category) %></i></h4>
+<%= link_to 'Edit', edit_post_path(post) %> - <%= link_to 'Show', post %><br/>
+<%= button_to 'Publish', {:action => 'publish', :id => post.id } %>
+<br/><br/>
+<hr/>

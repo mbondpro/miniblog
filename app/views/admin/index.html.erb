@@ -1,0 +1,5 @@
+<% @page_title = 'Admin' %>
+<h1>Admin</h1>
+<h2>Unpublished Posts</h2>
+<hr/>
+<%= render :partial => 'posts/admin', :as => :post, :collection => Post.unpub %>

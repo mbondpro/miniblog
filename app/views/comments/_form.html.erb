@@ -1,0 +1,15 @@
+<%= form_for(@comment, remote: true) do |f| %>
+	<div id="flash-error"></div>
+	
+	Add comment as <i><%= current_user.username %></i>.
+	<%= f.hidden_field :name, :value => current_user.username %>
+	
+	<%= hidden_field_tag 'post_id', post.id %>
+	<br/>
+		<div id="comment_body" class="field">
+    <%= f.text_area :body  %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

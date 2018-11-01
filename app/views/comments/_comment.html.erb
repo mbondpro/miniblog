@@ -1,0 +1,12 @@
+<div class='box' id='comment_<%= comment.id %>' >
+ <div class='boxtop'><div></div></div>
+  <div class='boxcontent'>
+		<% if admin? || @deletion_auth %>
+			<%= button_to "Delete", comment, :method => :delete %><br/>
+		<% end %>
+		  <p><b><%= comment.display_name %></b> 
+		  	on <%= comment.updated %></p>
+		  <p><%= comment.body %></p>
+  </div>
+ <div class='boxbottom'><div></div></div>
+</div>

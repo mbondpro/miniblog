@@ -1,0 +1,8 @@
+<div class="datetag">
+	<span class="date"><%= post.updated_at.strftime("%d") %></span>
+	<span class="month"><%= post.updated_at.strftime("%b") %></span>
+	<span class="year"><%= post.updated_at.strftime("%Y") %></span>
+</div>
+<h2><%= link_to post.title, post %></h2>
+<h3><%= post.subtitle %></h3>
+<h4>Posted in <i><%= link_to post.category, category_posts_path(post.category) %></i></h4>

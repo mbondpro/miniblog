@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <%= raw page_title %>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <%= raw meta "description" , meta_description %>
+  <%= raw meta "keywords" , meta_keywords %>
+  <%= stylesheet_link_tag 'main' %>  
+  <%= csrf_meta_tag %> 
+</head>
+	
+<body>
+
+<div id="wrap">
+
+<div id="header">
+	<h1><%= link_to 'My Blog', root_url %></a></h1>
+	<p id="slogan">My Witty Slogan</p>
+</div>
+
+<div id="sitemenu">
+	<h2>Categories</h2>
+	<ul>
+		<li><%= link_to 'All Posts', posts_path %></li>
+		<% Category.all.each do |c| %>
+			<li><%= link_to c, category_posts_path(c) %></li>
+		<% end %>
+	</ul>
+	
+</div>
+
+<div id="extras">
+	<h2>Manage</h2>
+    <ul>
+    	<% if user_signed_in? %>	
+    		<span id="menu_in">
+        	<li><%= link_to "Sign Out", destroy_user_session_path -%></li>
+      	</span>
+      <% else %>   
+      	<span id="menu_out">
+	        <li><%= link_to "Sign In", new_user_session_path -%></li>
+	        <li><%= link_to "Sign Up", new_user_registration_path -%></li>
+	      </span>
+      <% end %>       
+    </ul>
+  <% if admin? %>	
+		<span id="admin">
+			<h2>Admin</h2>
+			<ul>
+				<li><%= link_to "Admin", admin_path -%></li>
+				<li><%= link_to "New Post", new_post_path -%></li>
+				<li><%= link_to "Categories", categories_path -%></li>
+				<li><%= link_to "New Category", new_category_path -%></li>
+			</ul>	
+		</span>
+	<% end %>  
+	
+</div>
+
+<div id="content">
+	<%= render 'shared/flash'%>
+	<%= yield %>
+</div>
+
+<div id="footer">
+	<p><strong>Copyright &copy; Statement</strong>
+</div>	
+
+<%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js",
+		"http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js",
+		'jquery_ujs.js' , 'jq_main.js'%>
+</body>
+</html>

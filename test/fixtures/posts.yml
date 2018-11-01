@@ -1,0 +1,11 @@
+one:
+  title: My Title 1
+  subtitle: My Subtitle 1
+  body: MyBody1 MyBody1 MyBody1 MyBody1 MyBody1 MyBody1 MyBody1 MyBody1 MyBody1 MyBody1 
+  category: categories(:one)
+
+two:
+  title: My Title 2
+  subtitle: 
+  body: MyBody2 MyBody2 MyBody2 MyBody2 MyBody2 MyBody2 MyBody2 MyBody2 MyBody2 MyBody2 
+  category: categories(:two)
