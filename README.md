@@ -2,7 +2,7 @@
 
 This is a simple blog in Ruby on Rails 3.2. It allows the user to set up categories, add posts to the categories, and update or delete both. Users can log in to make comments, and the main user, as admin, can delete comments after they are made. After a user write a blog posting, it will be saved as draft, so the user must go to the admin page to publish the posting.
 
-See a video walkthrough here: https://mbondpro.blogspot.com/2018/11/mini-blog-code-and-walkthrough.html
+See a video walkthrough here: http://www.mbondpro.com/2018/11/mini-blog-code-and-walkthrough.html
 
 To set up, don't forget to perform the following actions:
 
